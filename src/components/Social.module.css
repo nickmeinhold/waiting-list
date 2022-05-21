@@ -1,0 +1,9 @@
+.social {
+  background-color: #28b8513b;
+  transition: 0.3s background-color;
+}
+
+.social:hover {
+  background-color: #28b851b7;
+  /* transition-delay: 1s; */
+}
