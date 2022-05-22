@@ -15,11 +15,14 @@ export const Hero = (props) => {
         </div>
         <div className="hero-texts min-w-2xl  mx-10">
           <h1 className="md:text-5xl md:text-5xl text-3xl md:my-0 mt-40 font-bold ">
-            Make changes to live apps without Redeployment.
+            Make changes to live apps.
+          </h1>
+          <h1 className="md:text-5xl md:text-5xl text-3xl  mt-5 font-bold">
+            Zero Build, Zero Redeploys
           </h1>
           <div className="my-4 md:text-md sm:text-md"></div>
           <h5>
-            It is a super power 🚀 . Join our wait-list as we build in public
+            It is a super power 🚀. Join our wait-list as we build in public
           </h5>
           <div className="my-8"></div>
           <form className="flex  flex-wrap p-0">
