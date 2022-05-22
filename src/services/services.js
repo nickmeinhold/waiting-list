@@ -9,15 +9,16 @@ export const addToWaitListService = (emailData) => {
       },
     }
   )
-    .then(() => {
+    .then((result) => {
+      console.log("This email was successfully :" + result);
+
       // Show a success Notification
       return true;
-      console.log("This email was successfully added to the server");
     })
     .catch((error) => {
-      return false;
       console.log(
-        "The user was not added to the wait-list on firebase server."
+        "The user was not added to the wait-list on firebase server." + error
       );
+      return false;
     });
 };

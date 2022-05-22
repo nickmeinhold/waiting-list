@@ -5,12 +5,34 @@ import { Badge } from "./Badge";
 import { Social } from "./Social";
 import { useContext } from "react";
 import { WaitListContext } from "../contexts/HeroContext";
+import { Preloader } from "./Preloader/Preloader";
+import { useRef } from "react";
+import { addToWaitListService } from "../services/services";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Hero = (props) => {
+  const emailDataRef = useRef();
   const waitListContext = useContext(WaitListContext);
+
+  function submitHandler() {
+    const userEmail = emailDataRef.current.value;
+    if (userEmail !== "" && userEmail.includes("@")) {
+      toast.success("Success! You have been added to the waiting list!");
+      emailDataRef.current.value = "";
+
+      // waitListContext.addToWaitListService(userEmail);
+    } else {
+      toast.error("Invalid email");
+    }
+
+    console.log(userEmail);
+  }
 
   return (
     <>
+      {/* <Preloader /> */}
+      <ToastContainer />
       <BoxPadding>
         <div className="md:flex my-40 items-center justify-center justify-center ">
           <div
@@ -30,16 +52,25 @@ export const Hero = (props) => {
               It is a super power 🚀. Join our wait-list as we build in public
             </h5>
             <div className="my-8"></div>
-            <form className="flex  flex-wrap p-0">
+            <form className="flex  flex-wrap p-0" action="">
               <input
                 type="text"
                 id="fname"
                 name="fname"
                 placeholder="Email"
+                ref={emailDataRef}
                 className={`md:px-5 md:mb-0 mb-5 p-5 rounded-t-md flex-grow border-b-2 focus:border-black ${classes.input_form}`}
+                required
               ></input>
               <div className="md:mx-4"></div>
-              <Button title="Join the Wait" />
+              <Button
+                title="Join the Wait"
+                onClick={(e) => {
+                  e.preventDefault();
+                  console.log("Testing works");
+                  submitHandler();
+                }}
+              />
             </form>
             <div className="my-16"></div>
             <Badge title="Actively building" />
