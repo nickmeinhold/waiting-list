@@ -21,7 +21,7 @@ export const Hero = (props) => {
       toast.success("Success! You have been added to the waiting list!");
       emailDataRef.current.value = "";
 
-      // waitListContext.addToWaitListService(userEmail);
+      waitListContext.addToWaitListService(userEmail);
     } else {
       toast.error("Invalid email");
     }
@@ -34,7 +34,7 @@ export const Hero = (props) => {
       {/* <Preloader /> */}
       <ToastContainer />
       <BoxPadding>
-        <div className="md:flex my-40 items-center justify-center justify-center ">
+        <div className="md:flex my-40 ">
           <div
             className={` -my-40 md:min-w-max md:max-w-0 max-w-sm ${classes.hero_image}`}
           >
@@ -42,10 +42,16 @@ export const Hero = (props) => {
           </div>
           <div className="hero-texts min-w-2xl  mx-10">
             <h1 className="md:text-5xl md:text-5xl text-3xl md:my-0 mt-40 font-bold ">
-              Make changes to live apps.
+              Make changes to live apps on the go!
             </h1>
-            <h1 className="md:text-5xl md:text-5xl text-3xl  mt-5 font-bold">
-              Zero Build, Zero Redeploys
+            <h1 className="md:text-2xl md:text-5xl text-1xl  mt-5 font-bold">
+              ⏱ &nbsp; Zero Build Time
+            </h1>
+            <h1 className="md:text-2xl md:text-5xl text-1xl  mt-5 font-bold">
+              ⚙️ &nbsp; Zero Build Redeploys
+            </h1>
+            <h1 className="md:text-2xl md:text-5xl text-1xl  mt-5 font-bold">
+              ☑️ &nbsp; Supports web, mobile and cloud applications
             </h1>
             <div className="my-4 md:text-md sm:text-md"></div>
             <h5>
@@ -77,8 +83,15 @@ export const Hero = (props) => {
             <div className="my-5"></div>
             <h1 className="text-2xl font-bold ">Stay Updated as we build.</h1>
             <div className="my-5"></div>
-            <Social social="Join us on Discord" />
-            <Social social="Join us on Twitter" />
+            <Social
+              social="Join us on Discord"
+              url="https://discord.gg/N5NcCgH7"
+            />
+            <Social
+              social="Join us on Twitter"
+              url="https://twitter.com/lyannah_app/"
+            />
+            <div className="my-5 h-1"></div>
           </div>
         </div>
       </BoxPadding>
