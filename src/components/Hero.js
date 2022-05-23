@@ -34,13 +34,13 @@ export const Hero = (props) => {
       {/* <Preloader /> */}
       <ToastContainer />
       <BoxPadding>
-        <div className="md:flex my-40 ">
+        <div className="md:flex  my-40 ">
           <div
             className={` -my-40 md:min-w-max md:max-w-0 max-w-sm ${classes.hero_image}`}
           >
             <img src="../../hero-image.svg" className="block" />
           </div>
-          <div className="hero-texts min-w-2xl  mx-10">
+          <div className="hero-texts min-w-2xl md:-my-20  mx-10">
             <h1 className="md:text-5xl md:text-5xl text-3xl md:my-0 mt-40 font-bold ">
               Make changes to live apps on the go!
             </h1>
@@ -48,7 +48,7 @@ export const Hero = (props) => {
               ⏱ &nbsp; Zero Build Time
             </h1>
             <h1 className="md:text-2xl md:text-5xl text-1xl  mt-5 font-bold">
-              ⚙️ &nbsp; Zero Build Redeploys
+              ⚙️ &nbsp; Zero Redeploys
             </h1>
             <h1 className="md:text-2xl md:text-5xl text-1xl  mt-5 font-bold">
               ☑️ &nbsp; Supports web, mobile and cloud applications
@@ -90,6 +90,10 @@ export const Hero = (props) => {
             <Social
               social="Join us on Twitter"
               url="https://twitter.com/lyannah_app/"
+            />
+            <Social
+              social="Read more"
+              url="https://ivory-newsboy-082.notion.site/Overview-5f6b7e90e9764b7ca857dba8dbf76c50"
             />
             <div className="my-5 h-1"></div>
           </div>
