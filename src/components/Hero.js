@@ -23,7 +23,7 @@ export const Hero = (props) => {
       {waitListContext.isLoading ? <Preloader /> : null}
       <ToastContainer />
       <BoxPadding>
-        <div className="md:flex  md:my-52 my-20 ">
+        <div className="md:flex  md:my-52 mt-40 ">
           <div
             className={`-my-40 md:min-w-max md:max-w-0 max-w-sm ${classes.hero_image}`}
           >
@@ -64,11 +64,11 @@ export const Hero = (props) => {
           </div>
         </div>
 
-        <div className="">
+        <div className="mt-10">
           <p className="md:text-5xl text-3xl text-center font-bold ">
             Use Cases and Benefits
           </p>
-          <div className="my-16"></div>
+          <div className="md:my-8 my-4"></div>
           <ReturnUseCases />
         </div>
         <p className="md:text-5xl text-3xl text-center font-bold my-10 p-6">
