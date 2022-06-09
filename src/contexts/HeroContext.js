@@ -4,7 +4,8 @@ import { addToWaitListService } from "../services/services";
 export const WaitListContext = createContext({
   isLoading: false,
   // isAddedToWaitList: false,
-  addToWaitListService: (emailData) => {},
+  addToWaitListService: async (emailData) => {},
+  setIsLoading: (value) => {},
 });
 
 export const WaitListContextProvider = (props) => {
@@ -23,12 +24,15 @@ export const WaitListContextProvider = (props) => {
       .then((result) => {
         //at this point, it has added to the waitList
         setIsAddedToWaitList(true);
+        console.log("The state was reset");
+
         return result;
       })
       .catch((err) => {
         //at this point, it doesn't add to waitList
         setIsAddedToWaitList(false);
-        return err;
+        console.log("The state was reset");
+        throw err;
       });
 
     setIsLoading(false);
@@ -37,6 +41,7 @@ export const WaitListContextProvider = (props) => {
   //This is the subsequent value of the context
   const context = {
     isLoading: isLoading,
+    setIsLoading: setIsLoading,
     isAddedToWaitList: isAddedToWaitList,
     addToWaitListService: addUserToWaitList,
   };

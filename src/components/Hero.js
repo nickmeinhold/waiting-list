@@ -15,15 +15,22 @@ export const Hero = (props) => {
   const emailDataRef = useRef();
   const waitListContext = useContext(WaitListContext);
 
-  function submitHandler() {
+  async function submitHandler() {
     const userEmail = emailDataRef.current.value;
-    if (userEmail !== "" && userEmail.includes("@")) {
-      toast.success("Success! You have been added to the waiting list!");
-      emailDataRef.current.value = "";
+    try {
+      if (userEmail !== "" && userEmail.includes("@")) {
+        toast.success("Success! You have been added to the waiting list!");
+        emailDataRef.current.value = "";
 
-      waitListContext.addToWaitListService(userEmail);
-    } else {
-      toast.error("Invalid email");
+        waitListContext.setIsLoading(true);
+        await waitListContext.addToWaitListService(userEmail);
+        waitListContext.setIsLoading(false);
+      } else {
+        toast.error("Invalid email");
+      }
+    } catch (error) {
+      console.log("The async function had an error which is" + error);
+      waitListContext.setIsLoading(false);
     }
 
     console.log(userEmail);
@@ -31,7 +38,7 @@ export const Hero = (props) => {
 
   return (
     <>
-      {/* <Preloader /> */}
+      {waitListContext.isLoading ? <Preloader /> : null}
       <ToastContainer />
       <BoxPadding>
         <div className="md:flex  my-40 ">
@@ -85,7 +92,7 @@ export const Hero = (props) => {
             <div className="my-5"></div>
             <Social
               social="Join us on Discord"
-              url="https://discord.gg/N5NcCgH7"
+              url="https://discord.gg/heDtHPP6Xu"
             />
             <Social
               social="Join us on Twitter"
