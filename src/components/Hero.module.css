@@ -4,3 +4,7 @@
 .input_form:focus {
   outline: 0;
 }
+
+.useCasesBox {
+  height: 500px;
+}
