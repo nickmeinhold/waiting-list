@@ -13,7 +13,8 @@ export const ReturnUseCases = () => {
         direction="backward"
         imageName="gaming.svg"
         title="Gaming"
-        content="Manage all your asset resources dynamically such that you can push updates to your games on the go."
+        content="Manage all your asset resources dynamically such that you can push updates to your games on the go.
+        "
       />
       <UseCases
         direction="forward"
