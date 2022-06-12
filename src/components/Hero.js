@@ -71,12 +71,12 @@ export const Hero = (props) => {
           <ReturnUseCases />
         </div>
         <div className="p-20 my-10 bg-green-50">
-          <p className="md:text-5xl text-3xl text-center font-bold ">
-            Platform Support
+          <p className="md:text-5xl text-2xl text-center font-bold ">
+            Platform Support <Badge title="BETA" />
           </p>
+
           <p className="text-md font-bold text-center mt-10 ">
-            Lyannah Beta has major platform SDKs which are 💚 React, 💙 Flutter,
-            🖤 Android
+            💚 React, 💙 Flutter, 🖤 Android
           </p>
         </div>
 

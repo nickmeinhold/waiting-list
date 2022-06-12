@@ -1,3 +1,5 @@
+import { Badge } from "../Badge";
+
 export const UseCasesContent = (props) => {
   return (
     <>
@@ -5,9 +7,14 @@ export const UseCasesContent = (props) => {
         <img src={`../../images/${props.imageName}`} className="block" />
       </div>
       <div className="max-w-md">
-        <p className="text-2xl font-bold my-6">{props.title}</p>
+        <p className="text-2xl font-bold my-3">{props.title}</p>
+        {props.isFuture ? (
+          <Badge title="Later Version" />
+        ) : (
+          <Badge title="BETA" />
+        )}
 
-        <p>{props.content}</p>
+        <p className="my-3">{props.content}</p>
       </div>
     </>
   );

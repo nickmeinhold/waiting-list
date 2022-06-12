@@ -13,6 +13,7 @@ export const UseCases = (props) => {
           title={props.title}
           content={props.content}
           imageName={props.imageName}
+          isFuture={props.isFuture}
         />
       </div>
     </div>
