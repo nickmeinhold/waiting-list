@@ -1,14 +1,8 @@
-# Getting Started with Lyannah
-
-Lyannah is an opensource dev tool that allows you manage your environment variables outside of your app to offer more flexibiltiy and update apps on the go without redeployment or rebuilds.
-
-- [Join the discord channel](https://discord.gg/J9dyNpSz)
-
-### Contributing Guidelines
+# Contributing Guidelines
 
 Looking to contribute something? Here's how you can help.
 
-#### Bugs reports
+## Bugs reports
 
 A bug is a _demonstrable problem_ that is caused by the code in the
 repository. Good bug reports are extremely helpful - thank you!
@@ -28,13 +22,13 @@ Guidelines for bug reports:
    information about the environment - operating system and version, browser
    and version... and steps required to reproduce the issue.
 
-#### Making Changes
+## Making Changes
 
 If you'd like to contribute please follow these instructions.
 
 [Fork this repo on GitHub](https://github.com/twitter/opensource-website/fork)
 
-##### Setup
+### Setup
 
 1. Clone your fork
 
@@ -55,7 +49,7 @@ npm install
 npm start
 ```
 
-#### Pull requests
+## Pull requests
 
 Good pull requests - patches, improvements, new features - are a fantastic
 help. They should remain focused in scope and avoid containing unrelated
