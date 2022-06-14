@@ -36,9 +36,9 @@ export const Hero = (props) => {
             <div className="my-8"></div>
 
             <h5 className="text-lg">
-              Lyannah is a developers tool that allows you manage resources in
-              your app without having to rebuild or deploy your code. It gives
-              you the super powers for dev and live preview of your apps 🚀.
+              Lyannah is a developer tool for managing resources in
+              your apps without having to rebuild or deploy. It gives
+              you developer super powers with live preview of your apps 🚀.
             </h5>
             <div className="my-8"></div>
             <WaitListForm />
